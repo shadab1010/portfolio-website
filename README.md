@@ -1,12 +1,104 @@
-# My Portfolio
+# Modern Portfolio Website
 
-A modern portfolio website built with Next.js, TypeScript, and Tailwind CSS, inspired by https://nadhir.dev/.
+A professional portfolio website built with Next.js 16, TypeScript, and Tailwind CSS, featuring a modern design with dark/light mode toggle, project showcases with image slideshows, and SEO optimization.
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Theme**: next-themes for dark/light mode
+- **Icons**: Custom SVG icons
+- **Deployment**: Ready for Vercel/Netlify
+
+## 📁 Project Structure
+
+```
+portfolio-website/
+├── app/
+│   ├── globals.css          # Global styles and animations
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main portfolio page
+├── components/
+│   └── ThemeToggle.tsx      # Dark/light mode toggle
+├── public/
+│   ├── favicon.png          # Profile image as favicon
+│   ├── Resume/              # ResumeAI project images
+│   └── DocuFlux/            # DocuFlux project images
+└── package.json             # Dependencies and scripts
+```
+
+## ✨ Features
+
+- 🎨 **Modern Design**: Clean, professional UI with gradient backgrounds
+- 🌙 **Dark/Light Mode**: Seamless theme switching with system preference detection
+- 📱 **Fully Responsive**: Optimized for all devices and screen sizes
+- 🖼️ **Project Showcases**: Interactive slideshows with 4 images per project
+- ⚡ **Fast Performance**: Optimized with Next.js and Tailwind CSS
+- 🔍 **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
+- 🎯 **Professional Branding**: Custom favicon with profile image
+
+## Updating Your GitHub Repository
+
+After making changes to your code, follow these steps to update your GitHub repository:
+
+### Manual Update Process:
+
+1. **Check what files changed:**
+   ```bash
+   git status
+   ```
+
+2. **Add your changes:**
+   ```bash
+   git add .
+   # or add specific files: git add filename
+   ```
+
+3. **Commit your changes:**
+   ```bash
+   git commit -m "Describe your changes here"
+   ```
+
+4. **Push to GitHub:**
+   ```bash
+   git push
+   ```
+
+### Example Workflow:
+```bash
+# Make your code changes in VS Code
+# Then run these commands:
+
+git add .
+git commit -m "Updated portfolio content and fixed styling"
+git push
+```
+
+## Automatic Deployment (Recommended)
+
+For automatic updates when you push to GitHub:
+
+### Deploy to Vercel:
+1. Go to [vercel.com](https://vercel.com)
+2. Connect your GitHub account
+3. Import your `portfolio-website` repository
+4. Every `git push` will automatically deploy your changes
+
+### Deploy to Netlify:
+1. Go to [netlify.com](https://netlify.com)
+2. Connect your GitHub repository
+3. Set up automatic deployments
+4. Changes push to GitHub will auto-deploy to Netlify
 
 ## Features
 
 - Responsive design
 - Dark/Light theme toggle
-- Sections: Hero, About, Services, Tools, Contact
+- Sections: Hero, About, Services, Tools, Projects, Contact
+- Project slideshows with multiple images
+- SEO optimized with meta tags
+- Professional favicon
 
 ## Getting Started
 
@@ -25,12 +117,27 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Customization
+## 🎨 Customization Guide
 
-- Update your personal information in `app/page.tsx`
-- Replace placeholder images in `public/` with your own avatar and project images
-- Add your resume details, projects, and social links
-- Customize the theme colors and styles as needed
+### Personal Information:
+- **Hero Section**: Update name, title, and description in `app/page.tsx`
+- **About Section**: Modify the about content and skills
+- **Contact**: Update social media links and contact information
+
+### Projects:
+- **Images**: Replace images in `public/Resume/` and `public/DocuFlux/` folders
+- **Content**: Update project descriptions, technologies, and links in `app/page.tsx`
+- **Add Projects**: Copy existing project structure and modify content
+
+### Styling:
+- **Colors**: Modify Tailwind classes in `app/globals.css` and `app/page.tsx`
+- **Fonts**: Update font settings in `app/layout.tsx`
+- **Animations**: Customize CSS animations in `app/globals.css`
+
+### Branding:
+- **Favicon**: Replace `public/favicon.png` with your updated profile image
+- **Logo**: Update the logo in the header section
+- **Colors**: Modify the purple gradient theme colors throughout the site
 
 ## Deploy on Vercel
 
