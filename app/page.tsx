@@ -133,11 +133,11 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20">
-                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">5+</div>
                   <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">3+</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">1+</div>
                   <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
                 </div>
               </div>
@@ -963,7 +963,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-slate-800 text-center">
-            <p className="text-slate-400 mb-2">Website designed and built with ❤️ using Next.js, TypeScript and Tailwind CSS</p>
+            <p className="text-slate-400 mb-2">Built with modern web technologies by ❤️Shadab.</p>
             <p className="text-slate-500 text-sm">&copy; 2026 Shadab. All rights reserved.</p>
           </div>
         </div>
