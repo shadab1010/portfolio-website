@@ -38,6 +38,75 @@ portfolio-website/
 - 🔍 **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
 - 🎯 **Professional Branding**: Custom favicon with profile image
 
+## 📧 Setting Up Contact Form with EmailJS
+
+Your contact form is now functional! To make it send emails to your inbox, follow these steps:
+
+### 1. Create EmailJS Account
+1. Go to [EmailJS.com](https://www.emailjs.com/) and create a free account
+2. Verify your email address
+
+### 2. Set Up Email Service
+1. In your EmailJS dashboard, go to **Email Services**
+2. Click **Add New Service**
+3. Choose your email provider (Gmail, Outlook, etc.)
+4. Connect your email account and give it a name (e.g., "gmail")
+
+### 3. Create Email Template
+1. Go to **Email Templates** in your dashboard
+2. Click **Create New Template**
+3. Use this template structure:
+
+**Subject:**
+```
+New Contact Form Message from {{from_name}}
+```
+
+**HTML Body:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Contact Message</title>
+</head>
+<body>
+    <h2>New message from your portfolio website</h2>
+    <p><strong>From:</strong> {{from_name}} ({{from_email}})</p>
+    <p><strong>Subject:</strong> {{subject}}</p>
+    <p><strong>Message:</strong></p>
+    <p>{{message}}</p>
+    <hr>
+    <p><small>This message was sent from your portfolio contact form.</small></p>
+</body>
+</html>
+```
+
+### 4. Get Your IDs
+1. **Service ID**: From Email Services section (looks like "service_xxxxx")
+2. **Template ID**: From Email Templates section (looks like "template_xxxxx")
+3. **Public Key**: From Account section → General (looks like a long string)
+
+### 5. Update Your Code
+1. Open `components/ContactForm.tsx`
+2. Replace the placeholder values:
+   ```typescript
+   const serviceId = 'service_hzqeyx9'     // ← Replace with your Service ID
+   const templateId = 'template_kpxqbrf'   // ← Replace with your Template ID
+   const publicKey = 'URz82o-kkgk-0d8Nn'     // ← Replace with your Public Key
+   ```
+3. Update the `to_email` if needed (it's already set to your email)
+
+### 6. Test Your Form
+1. Run your development server: `npm run dev`
+2. Go to the contact section
+3. Fill out and submit the form
+4. Check your email for the message!
+
+### Troubleshooting
+- **Emails not sending**: Double-check your Service ID, Template ID, and Public Key
+- **Template not working**: Make sure your template variables match exactly (`{{from_name}}`, `{{from_email}}`, etc.)
+- **Gmail issues**: You may need to enable "Less secure app access" or use an App Password
+
 ## Updating Your GitHub Repository
 
 After making changes to your code, follow these steps to update your GitHub repository:
@@ -70,9 +139,9 @@ After making changes to your code, follow these steps to update your GitHub repo
 # Make your code changes in VS Code
 # Then run these commands:
 
-git add .
+git add    # git add app/page.tsx
 git commit -m "Updated portfolio content and fixed styling"
-git push
+git push #origin master
 ```
 
 ## Automatic Deployment (Recommended)
